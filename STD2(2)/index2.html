@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style2.css">
+    <title>Signup</title>
+</head>
+<body style=" background-color: #262626;">
+    <div class="c">
+            <div class="content">
+                <header>SignUp</header>
+                <form action="#">
+                    <div class="field">
+                        <span class="fa fa-user"></span>
+                        <input type="text" required placeholder="Email Address or Phone number">
+                    </div>
+                    <div class="field space">
+                        <span class="fa fa-lock"></span>
+                        <input type="password" class="password" required placeholder="Password">
+                    
+                    </div>
+                    <div class="field space">
+                        <span class="fa fa-lock"></span>
+                        <input type="password" class="password1" required placeholder="Confirm Password">
+                    
+                    </div>
+                    <div class="field space">
+                        <input type="submit" value="SignUp">
+                    </div>
+                    <div class="signup">Go for
+                        <a href="index1.html">Login</a>
+                    </div>
+                </form>
+            </div>
+    </div>
+    <script>
+        const pass_field =document.querySelector('.password .passwoed1');
+        const show_btn =document.querySelector('.show');
+        show_btn.addEventListener('click', function(){
+            if(pass_field.type ==="password" && pass_field.type ==="password1"){
+                pass_field.type= "text";
+                show_btn.style.color= "#3498db"; 
+                show_btn.textContent = "HIDE";
+            }else{
+                pass_field.type= "password";
+                pass_field.type= "password1";
+                show_btn.style.color= "#222"; 
+                show_btn.textContent = "SHOW";
+            }
+        });
+    </script>
+</body>
+</html>
